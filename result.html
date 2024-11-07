@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation</title>
+</head>
+<body>
+    <h2>Your Personalized Care Routine</h2>
+    <p><strong>Routine:</strong> {{ routine }}</p>
+    <p><strong>Recommended Products:</strong></p>
+    <ul>
+        {% for product in products %}
+            <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+    <p><strong>Care Tips:</strong> {{ tips }}</p>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Recommended Products for {{ type_name }}</h2>
+        <div class="list-group">
+            {% for recommendation in recommendations %}
+            <div class="list-group-item">
+                <h4>{{ recommendation['Product Name'] }}</h4>
+                <p><strong>Product Type:</strong> {{ recommendation['Product Type'] }}</p>
+                <p><strong>Description:</strong> {{ recommendation['Description'] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Recommended Products for {{ type_name }}</h2>
+        <p class="text-center">Based on your selection, here are some products and tips that may suit you.</p>
+
+        <div class="row">
+            {% for recommendation in recommendations %}
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ recommendation['Product Name'] }}</h4>
+                        <p><strong>Type:</strong> {{ recommendation['Product Type'] }}</p>
+                        <p><strong>Description:</strong> {{ recommendation['Description'] }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+

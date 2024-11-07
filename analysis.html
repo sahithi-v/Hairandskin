@@ -1,0 +1,127 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Analysis Type</title>
+</head>
+<body>
+    <h2>Select Your {{ analysis_type.capitalize() }} Type</h2>
+    <ul>
+        {% for item in dataset %}
+            <li>
+                <a href="{{ url_for('recommendation', analysis_type=analysis_type, type_id=item['id']) }}">
+                    {{ item['name'] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Hair/Skin Type</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Select Your {{ analysis_type.capitalize() }} Type</h2>
+        <ul class="list-group">
+            {% for item in dataset %}
+            <li class="list-group-item">
+                <a href="{{ url_for('recommendation', analysis_type=analysis_type, type_id=item.id) }}">{{ item.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your {{ analysis_type.capitalize() }} Type</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Select Your {{ analysis_type.capitalize() }} Type</h2>
+        <p class="text-center">Choose the type that best represents your hair or skin characteristics.</p>
+
+        <div class="row">
+            {% for item in dataset %}
+            <div class="col-md-4 mb-4">
+                <a href="{{ url_for('recommendation', analysis_type=analysis_type, type_id=item.id) }}">
+                    <div class="card shadow-sm">
+                        <img src="{{ url_for('static', filename='images/' + item.name.lower().replace(' ', '_') + '.jpg') }}" class="card-img-top" alt="{{ item.name }}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ item.name }}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your {{ analysis_type.capitalize() }} Type</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Select Your {{ analysis_type.capitalize() }} Type</h2>
+        <p class="text-center">Choose the type that best represents your hair or skin characteristics.</p>
+
+        <div class="row">
+            {% for item in dataset %}
+            <div class="col-md-4 mb-4">
+                <a href="{{ url_for('recommendation', analysis_type=analysis_type, type_id=item.id) }}">
+                    <div class="card shadow-sm">
+                        <img src="{{ url_for('static', filename='images/' + item.name.lower().replace(' ', '_') + '.jpg') }}" class="card-img-top" alt="{{ item.name }}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ item.name }}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
